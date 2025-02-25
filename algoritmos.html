@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algoritmos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-image: url('fondo1.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        h1 {
+            font-family: 'Lobster', cursive;
+            margin-bottom: 100px;
+            color: white;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto;
+            gap: 20px;
+            justify-content: center;
+            max-width: 800px;
+            margin: auto;
+            margin-top: 180px;
+        }
+        .grid-item {
+            text-align: center;
+        }
+        .grid-item img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .grid-item a {
+            color: black;
+            font-size: 18px;
+            font-family: 'Verdana', sans-serif;
+            font-weight: normal;
+            text-decoration: none;
+        }
+        .grid-item a:hover {
+            text-decoration: underline;
+        }
+        .full-width {
+            grid-column: span 2;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Algoritmos</h1>
+    <div class="grid-container">
+        <div class="grid-item">
+            <img src="Pregunta.jpg" alt="Respuestas">
+            <br>
+            <a href="RespuestasA.html">Respuestas</a>
+        </div>
+        <div class="grid-item">
+            <img src="pseudocodigo.png" alt="Pseudocódigo">
+            <br>
+            <a href="PseudocodigoA.html">Pseudocódigo</a>
+        </div>
+        <div class="grid-item full-width">
+            <img src="Diagrama.avif" alt="Diagrama">
+            <br>
+            <a href="DiagramaA.html">Diagrama</a>
+        </div>
+    </div>
+</body>
+</html>
