@@ -18,21 +18,32 @@
         }
         h1 {
             font-family: 'Lobster', cursive;
-            margin-bottom: 30px;
+            margin-bottom: 80px; /* Separa más el título */
         }
         .content {
             max-width: 900px;
             margin: auto;
-            text-align: left;
+            text-align: center;
             background: rgba(0, 0, 0, 0.7);
-            padding: 20px;
+            padding: 10px;
             border-radius: 10px;
         }
-        h2 {
-            color: #ffcc00;
+        .pdf-link {
+            font-size: 20px;
+            background: #ffcc00;
+            color: black;
+            padding: 15px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 80px; /* Baja más el botón */
+        }
+        .pdf-link:hover {
+            background: #e6b800;
         }
         .back-home {
-            margin-top: 20px;
+            margin-top: 30px;
         }
         a {
             color: #ffcc00;
@@ -46,29 +57,12 @@
 <body>
     <h1>Algoritmo AHA</h1>
     <div class="content">
-        <h2>¿Qué es un algoritmo de optimización bioinspirado?</h2>
-        <p>Un algoritmo de optimización bioinspirado es un método computacional que toma inspiración de procesos naturales, como la evolución, el comportamiento de animales o la dinámica de ecosistemas, para resolver problemas de optimización.</p>
-        
-        <h2>Fundamentos del AHA</h2>
-        <p>El algoritmo AHA se basa en las habilidades de vuelo del colibrí, su estrategia de forrajeo y la memoria para toma de decisiones.</p>
-        
-        <h2>Comparación con otros algoritmos</h2>
-        <p>Se compara con PSO (Optimización por Enjambre de Partículas) y ABC (Algoritmo de la Colonia de Abejas), destacando diferencias clave.</p>
-        
-        <h2>Ejercicio Reflexivo</h2>
-        <p>¿Cómo crees que el equilibrio entre exploración y explotación en AHA puede mejorar el rendimiento de un modelo de IA?</p>
-        
-        <h2>Implementación de AHA en Python</h2>
-        <p>Explicación matemática, pseudocódigo y parámetros clave del algoritmo.</p>
-        
-        <h2>Aplicaciones en Inteligencia Artificial</h2>
-        <p>Optimización de hiperparámetros en redes neuronales, selección de características y comparación con otros métodos.</p>
-        
-        <h2>Pregunta Reflexiva</h2>
-        <p>¿Por qué la capacidad de memoria del AHA puede ser útil en la optimización de hiperparámetros?</p>
+        <p>Haz clic en el siguiente botón para ver el documento en PDF:</p>
+        <a class="pdf-link" href="Algoritmo AHA.pdf" target="_blank">Ver PDF</a>
     </div>
     <div class="back-home">
         <a href="AHA.html">Volver a AHA</a>
     </div>
 </body>
 </html>
+
