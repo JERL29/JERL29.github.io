@@ -18,21 +18,32 @@
         }
         h1 {
             font-family: 'Lobster', cursive;
-            margin-bottom: 30px;
+            margin-bottom: 80px; /* Separa más el título */
         }
         .content {
             max-width: 900px;
             margin: auto;
-            text-align: left;
+            text-align: center;
             background: rgba(0, 0, 0, 0.7);
-            padding: 20px;
+            padding: 40px;
             border-radius: 10px;
         }
-        h2 {
-            color: #ffcc00;
+        .pdf-link {
+            font-size: 20px;
+            background: #ffcc00;
+            color: black;
+            padding: 15px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 80px; /* Baja más el botón */
+        }
+        .pdf-link:hover {
+            background: #e6b800;
         }
         .back-home {
-            margin-top: 20px;
+            margin-top: 30px;
         }
         a {
             color: #ffcc00;
@@ -46,63 +57,10 @@
 <body>
     <h1>Algoritmo AHA</h1>
     <div class="content">
-        <h2>1. ¿Qué es un algoritmo de optimización bioinspirado?</h2>
-        <p>Un algoritmo de optimización bioinspirado es un método computacional que toma inspiración de procesos naturales, como la evolución, el comportamiento de animales o la dinámica de ecosistemas, para resolver problemas de optimización. Este algoritmo imita estrategias eficientes encontradas en la naturaleza para encontrar soluciones óptimas en diferentes contextos, como en la inteligencia artificial y el aprendizaje automático.</p>
-        
-        <h2>2. Fundamentos del AHA</h2>
-        <h3>2.1. Habilidades de vuelo del colibrí</h3>
-        <p>En el algoritmo, el “vuelo” representa los movimientos dentro del espacio de búsqueda. Los colibríes pueden moverse en direcciones distintas (axial, diagonal, omnidireccional), lo que en términos de optimización significa que el algoritmo puede explorar soluciones desde diferentes ángulos y con distintas estrategias. Esto es para ayudar a mejorar la capacidad de búsqueda y evitar quedar atrapados en óptimos locales.</p>
-        
-        <h3>2.2. Estrategia de forrajeo</h3>
-        <p>Este representa la forma en que se busca soluciones óptimas, estas pueden ser:</p>
-        <ul>
-            <li><strong>Guiado:</strong> El algoritmo sigue una dirección basada en la mejor solución encontrada hasta el momento.</li>
-            <li><strong>Territorial:</strong> Busca soluciones en una región específica antes de expandirse a otras áreas.</li>
-            <li><strong>Migración:</strong> Cambia completamente la estrategia cuando no encuentra mejoras en la región actual.</li>
-        </ul>
-        
-        <h3>2.3. Memoria y toma de decisiones en el AHA</h3>
-        <p>El algoritmo almacena información sobre soluciones exploradas previamente, lo que le permite aprender y evitar evaluar constantemente las mismas soluciones. La toma de decisiones se basa en la comparación de resultados previos y en la adaptación de nuevas estrategias de búsqueda.</p>
-        
-        <h2>3. Comparación con PSO y ABC</h2>
-        <h3>3.1. PSO</h3>
-        <ul>
-            <li>Está basado en el comportamiento de enjambres de partículas.</li>
-            <li>Cada partícula representa una solución y se mueve en función de su experiencia y la del grupo.</li>
-            <li>Se centra en mejorar la solución global y la mejor individual.</li>
-        </ul>
-        
-        <h3>3.2. ABC</h3>
-        <ul>
-            <li>Modela la forma en que las abejas buscan alimento.</li>
-            <li>Se divide en abejas exploradoras, obreras y observadoras que evalúan y comunican la calidad de diferentes fuentes de alimento (estas son las posibles soluciones).</li>
-            <li>Balancea la exploración de nuevas soluciones con la explotación de buenas soluciones encontradas.</li>
-        </ul>
-    <h2>Ejercicio Reflexivo</h2>
-        <p><strong>¿Cómo crees que el equilibrio entre exploración y explotación en AHA puede mejorar el rendimiento de un modelo de IA?</strong></p>
-        <p><strong>Exploración:</strong> Se refiere a la capacidad del algoritmo de buscar soluciones nuevas en diferentes partes del espacio de búsqueda.</p>
-        <p><strong>Explotación:</strong> Es la capacidad de mejorar soluciones dentro de una región prometedora.</p>
-        <p>Un buen equilibrio significa que el algoritmo no se queda atrapado en soluciones subóptimas (porque explora lo suficiente) ni pierde tiempo probando demasiadas opciones innecesarias (porque también explota las mejores soluciones encontradas). En modelos de inteligencia artificial, este equilibrio puede mejorar la capacidad de ajuste de los modelos, evitando caer en mínimos locales y encontrando configuraciones óptimas más rápido.</p>
-        
-        <h2>Implementación de AHA en Python</h2>
-        <h3>Explicación Matemática</h3>
-        <h3>Inicialización del Algoritmo</h3>
-        <p>Sea un espacio de búsqueda definido por una función objetivo f(x) donde x representa las soluciones candidatas.</p>
-        <p>Se genera una población inicial N colibríes con posiciones aleatorias en el espacio de búsqueda:</p>
-        <p>X_i=(x_i1, x_i2, …., x_id) para i=1,2,…,N donde d es la dimensión del problema.</p>
-        <p>Se evalúa la calidad de la solución usando la función objetivo f(X_i).</p>
-        
-        <h3>Movimiento de los colibríes</h3>
-        <ul>
-            <li><strong>Movimiento Axial (Exploración local - Refinamiento de solución):</strong> X_i^(t+1) = X_i^t + r * (X_best^t - X_i^t)</li>
-            <li><strong>Movimiento Diagonal (Exploración global - Evitar óptimos locales):</strong> X_i^(t+1) = X_i^t + β * (X_j^t - X_k^t)</li>
-            <li><strong>Movimiento Omnidireccional (Exploración aleatoria - Diversificación):</strong> X_i^(t+1) = X_i^t + α * N(0,1)</li>
-        </ul>
-        <h2>Selección de características en Machine Learning</h2>
-        <h3>1. Cómo el AHA puede seleccionar un subconjunto óptimo de características para mejorar la precisión de modelos.</h3>
-        <p>El AHA puede seleccionar un subconjunto óptimo de características mediante un proceso de búsqueda inteligente que evalúa diferentes combinaciones de variables y el impacto que tienen en la precisión del modelo. Este utiliza su capacidad de memoria para recordar qué conjuntos de características han funcionado mejor y ajustar su estrategia en cada iteración.</p>
-        </div>
-        <div class="back-home">
+        <p>Haz clic en el siguiente botón para ver el documento en PDF:</p>
+        <a class="pdf-link" href="Introducción a los algoritmos.pdf" target="_blank">Ver PDF</a>
+    </div>
+    <div class="back-home">
         <a href="AHA.html">Volver a AHA</a>
     </div>
 </body>
